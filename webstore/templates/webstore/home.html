@@ -1,0 +1,90 @@
+{% extends "webstore/base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <section class="header1 cid-s48MCQYojq mbr-fullscreen mbr-parallax-background" id="header1-f">    
+        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1 class="mbr-section-title display-3"></h1>
+            </div>
+            <div class="row">
+                {% for cake in cakes %}
+                <div class="col-lg-4 col-sm-12">               
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-5" href=" {% url "store-category" %}">{{cake.name}}<br></a></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="content1 cid-s48udlf8KU" id="content1-8">
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-md-9">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Work with Content</strong></h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Click on the image to replace it. To change parameters of a block, click on <em>the blue gear icon</em>. You can set a background type and its content. Click on the Buttons parameter to enable buttons for this block. Click in the text to change your text style or color. Select text to change its formatting or add links.</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="image3 cid-s48upRUlSD" id="image3-9">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="image-wrapper">
+                        <img src="{% static "images/mbr-1456x921.jpg" %}" alt="Mobirise">
+                        <p class="mbr-description mbr-fonts-style mt-2 align-center display-4">
+                            Image Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content1 cid-s48vaXqeL6" id="content1-b">
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-md-9">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Add new blocks</strong></h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Mobirise offers several themes to work with. Each theme includes a set of various blocks: headers, content blocks, 
+                        galleries and sliders, footers, etc. To add needed blocks to your page, click on 
+                        <em>the red plus button </em>at the bottom right corner. You can select a needed block type. To add a block, click on it in the list or drag it to your page.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content1 cid-s48vnjULo4" id="content1-c">
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-md-9">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Create new pages</strong></h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">You can have multiple pages in your project. Find the menu icon at the top left corner. Move your cursor over it to open the main menu. Click on the <strong>Pages </strong>tab to manage your pages. Don't forget to set your page title and description. This info is used by browsers and search engines. The home page of your project cannot be removed.</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content1 cid-s48vrXhP0J" id="content1-d">
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="title col-12 col-md-9">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Publish your project
+    </strong></h3>
+                    <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Click on the <strong>Publish </strong>button at the top right corner and select a needed publishing option. Use the Mobirise publish option to publish your test site on our servers. You can publish your site locally if you don't want to publish it online yet.</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

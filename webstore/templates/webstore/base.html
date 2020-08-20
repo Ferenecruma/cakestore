@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.0.28, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="{% static "images/icons8-cupcake-64-64x64.png" %}" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static "tether/tether.min.css" %}">
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-grid.min.css" %}">
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-reboot.min.css" %}">
+  
+  <link rel="stylesheet" href="{% static "dropdown/css/style.css" %}">
+  <link rel="stylesheet" href="{% static "socicon/css/styles.css" %}">
+  <link rel="stylesheet" href="{% static "theme/css/style.css" %}">
+  <link rel="preload" as="style" href="{% static "mobirise/css/mbr-additional.css" %}"><link rel="stylesheet" href="{% static "mobirise/css/mbr-additional.css" %}" type="text/css">
+
+</head>
+  <body class="d-flex flex-column">
+    
+    <!-- Header -->
+    <section class="menu cid-s48OLK6784" once="menu" id="menu1-h">
+      <nav class="navbar navbar-dropdown navbar-expand-lg">
+          <div class="container-fluid">
+              <div class="navbar-brand">
+                  <span class="navbar-logo">
+                      <a href="{% url 'store-main' %}">
+                          <img src="{% static "images/icons8-cupcake-64-64x64.png" %}" alt="Mobirise" style="height: 3.8rem;">
+                      </a>
+                  </span>
+                  <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-5" href="{% url 'store-main' %}">Cake store</a></span>
+              </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="hamburger">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black display-7" href="{% url 'store-main' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-7" href="https://mobirise.com">About</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black display-7" href="https://mobirise.com">Gallery</a></li>
+                  </ul>
+                  <div class="icons-menu">
+                      <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                          <span class="p-2 mbr-iconfont socicon-facebook socicon"></span>
+                      </a>
+                      <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                          <span class="p-2 mbr-iconfont socicon-twitter socicon"></span>
+                      </a>
+                      <a class="iconfont-wrapper" href="https://mobiri.se" target="_blank">
+                          <span class="p-2 mbr-iconfont socicon-instagram socicon"></span>
+                      </a>
+                      
+                  </div>
+                  
+              </div>
+          </div>
+      </nav>
+    </section>
+    <!-- Header -->
+    {% block content %} {% endblock %}
+    <!-- Footer -->
+    <section class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-i">            
+      <div class="container">        
+        <div class="media-container-row align-center mbr-white">            
+          <div class="row row-links">               
+             <ul class="foot-menu">                                                                                                                    
+               <li class="foot-menu-item mbr-fonts-style display-7"><a href="https://mobirise.com/help/" class="text-black">Help Center</a></li>
+               <li class="foot-menu-item mbr-fonts-style display-7"><a href="http://forums.mobirise.com/" class="text-black">Mobirise Forums</a></li>
+               <li class="foot-menu-item mbr-fonts-style display-7"><a href="http://forums.mobirise.com/" class="text-black">Mobirise Forums</a></li>
+               <li class="foot-menu-item mbr-fonts-style display-7"><a href="http://forums.mobirise.com/" class="text-black">Mobirise Forums</a></li>
+              </ul>            
+            </div>            
+            <div class="row social-row">               
+          <div class="social-list align-right pb-2">                                                                                              
+            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span></a>                    
+            </div>
+            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span></a>                    
+            </div>
+            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-telegram socicon" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>                        </a> 
+            </div>
+            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>                        </a>                    </div>
+            </div>            
+            </div>            
+          <div class="row row-copirayt"><p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">                    © Copyright 2020 Mobirise. All Rights Reserved.                </p>            
+          </div>        
+        </div>    
+      </div>
+    </section>
+    <script src="{% static "web/assets/jquery/jquery.min.js" %}"></script>  
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>  
+    <script src="{% static "smoothscroll/smooth-scroll.js" %}"></script>  
+    <script src="{% static "parallax/jarallax.min.js" %}"></script>  
+    <script src="{% static "dropdown/js/nav-dropdown.js" %}"></script>  
+    <script src="{% static "dropdown/js/navbar-dropdown.js" %}"></script>  
+    <script src="{% static "touchswipe/jquery.touch-swipe.min.js" %}"></script>  
+    <script src="{% static "theme/js/script.js" %}"></script>
+    <script src="{% static "popper/popper.min.js" %}"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js" integrity="sha512-X7kCKQJMwapt5FCOl2+ilyuHJp+6ISxFTVrx+nkrhgplZozodT9taV2GuGHxBgKKpOJZ4je77OuPooJg9FJLvw==" crossorigin="anonymous"></script>
+  </body>
+</html>
