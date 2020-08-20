@@ -1,1 +1,26 @@
 {% extends "webstore/base.html" %}
+
+{% block content %}
+    <section class="features7 cid-s87LfWZou8 mbr-parallax-background" id="features8-o">
+        <div class="container">
+            <div class="row">
+                <div class="title col-12">
+                    <h5 class="mbr-section-title mbr-fonts-style mb-3 display-2">
+                        <strong>Our Products</strong>
+                    </h5>
+                    
+                </div>
+                {% for cake in products%}
+                <div class="card col-12 col-md-6" style="width: 17rem;">
+                    <div class="card-wrapper " >
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text mbr-fonts-style">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}

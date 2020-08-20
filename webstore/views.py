@@ -30,4 +30,7 @@ def about(request):
     return render(request, 'webstore/about.html')
 
 def category(request):
-    return render(request, 'webstore/category.html')
+    context = {
+        'products' : cakes
+    }
+    return render(request, 'webstore/category.html', context)
