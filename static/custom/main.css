@@ -1,6 +1,20 @@
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #e4190a;
+    color: white;
+    font-size: 10px;
+  }
+.header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 261px;
+}
 .menu_image {
     padding-top: 20px;
-    border-radius: 1em;
+    padding-bottom: 20px;
+    border-radius: 5em;
 }
 figure .menu_image {
 	opacity: 1;
@@ -22,4 +36,26 @@ div.category_name {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  li.navbar-items{
+    font-family: 'Marck Script', cursive;
+    font-size: 30px;
+    color: #eb640ab0!important
+  }
+
+  ul.navbar-group{
+    margin: auto;
+  }
+
+  a.nav-link{
+    color: #744510ef!important;
+  }
+
+  a.nav-link:hover{
+    color: rgb(240, 8, 8)!important;
+  }
+
+  .categories-cont{
+    max-width: 75%!important;
   }

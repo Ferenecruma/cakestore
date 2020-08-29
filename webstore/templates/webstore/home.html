@@ -7,15 +7,12 @@
         <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
         
      
-        <div class="container">
-            <div class="row justify-content-center">
-                <h1 class="mbr-section-title display-3"></h1>
-            </div>
-            <div class="row">
+        <div class="container categories-cont">
+            <div class="row mt-3">
                 {% for category in categories %}
-                <div class="col-lg-4 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <a href="{% url 'store-category' %}">               
-                        <figure><img src="{{ category.photo.url }}" class="img-fluid m-2 p-2 menu_image" alt="Responsive image" width="320" height="240"></figure>
+                        <figure><img src="{{ category.photo.url }}" class="img-fluid m-2 p-2 menu_image" alt="Responsive image"></figure>
                         <div class="category_name">{{ category.title }}</div>
                     </a>
                 </div>

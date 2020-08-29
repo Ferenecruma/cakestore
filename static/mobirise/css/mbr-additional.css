@@ -515,7 +515,7 @@ body {
   color: #47b5ed !important;
 }
 .text-warning {
-  color: #ffe161 !important;
+  color: #f1d186 !important;
 }
 .text-danger {
   color: #ff9966 !important;
@@ -1146,7 +1146,8 @@ a {
 .cid-s48P1Icc8J {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #ffb18a;
+  background-color: #e4190a;
+  border-top: #f1d186 solid 15px;
 }
 .cid-s48P1Icc8J .row-links {
   width: 100%;
