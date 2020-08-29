@@ -11,6 +11,8 @@
   
   
   <title>Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="{% static "tether/tether.min.css" %}">
   <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
   <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-grid.min.css" %}">
@@ -20,6 +22,22 @@
   <link rel="stylesheet" href="{% static "socicon/css/styles.css" %}">
   <link rel="stylesheet" href="{% static "theme/css/style.css" %}">
   <link rel="preload" as="style" href="{% static "mobirise/css/mbr-additional.css" %}"><link rel="stylesheet" href="{% static "mobirise/css/mbr-additional.css" %}" type="text/css">
+
+  <link rel="stylesheet" href="{% static "custom/main.css" %}"> 
+
+  <style> 
+ .menu_image figure {
+	background: #1abc9c;
+}
+.menu_image figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.menu_image figure:hover img {
+	opacity: .6;
+}
+  </style>
 
 </head>
   <body class="d-flex flex-column">
@@ -31,10 +49,10 @@
               <div class="navbar-brand">
                   <span class="navbar-logo">
                       <a href="{% url 'store-main' %}">
-                          <img src="{% static "images/icons8-cupcake-64-64x64.png" %}" alt="Mobirise" style="height: 3.8rem;">
+                          <img src="{% static "images/logo.png" %}" alt="Mobirise" style="height: 3.8rem;">
                       </a>
                   </span>
-                  <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-5" href="{% url 'store-main' %}">Cake store</a></span>
+                  <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-5" href="{% url 'store-main' %}" style="font-family: 'Caveat', cursive;">Amalfi</a></span>
               </div>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <div class="hamburger">

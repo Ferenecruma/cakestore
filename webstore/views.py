@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from webstore.models import Category
+
 
 cakes = [
     {
@@ -24,6 +26,10 @@ def home(request):
     context = {
         'cakes' : cakes
     }
+    all_objects = Category.objects.all()
+    print(all_objects)
+    print(type(all_objects.first()))
+    context['categories'] = all_objects
     return render(request, 'webstore/home.html', context)
 
 def about(request):

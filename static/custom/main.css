@@ -1,0 +1,25 @@
+.menu_image {
+    padding-top: 20px;
+    border-radius: 1em;
+}
+figure .menu_image {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+figure:hover .menu_image {
+	opacity: .7;
+}
+
+figure:hover + div.category_name { color: yellow; }
+
+div.category_name {
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    opacity: 0.8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
