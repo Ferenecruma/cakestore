@@ -28,7 +28,7 @@
 
 </head>
   <body class="d-flex flex-column">
-    
+      
     <!-- Header -->
     <div class="header">  
       <img src="{% static "images/logo_text.png" %}" class='img-fluid'>
@@ -43,10 +43,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto navbar-group">
             <li class="nav-item active navbar-items">
-              <a class="nav-link " href="#">Головна |<span class="sr-only">(current)</span></a>
+              <a class="nav-link " href="{% url 'store-main' %}">Головна |<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active navbar-items">
-              <a class="nav-link" href="#">Категорії |<span class="sr-only">(current)</span></a>  
+              <a id="categories-link" class="nav-link" href="{% url 'store-categories' %}">Категорії |<span class="sr-only">(current)</span></a>  
             </li>
             <li class="nav-item active navbar-items">
               <a class="nav-link" href="#">Галерея |<span class="sr-only">(current)</span></a> 
@@ -61,17 +61,17 @@
     <!-- Header -->
     {% block content %} {% endblock %}
     <!-- Footer -->
-    <section class="footer3 cid-s48P1Icc8J" once="footers" id="footer3-i">            
+    <section class="footer3 cid-s48P1Icc8J custom-footer" once="footers" id="footer3-i">            
       <div class="container">        
         <div class="media-container-row align-center mbr-white">            
-          <div class="row row-links">               
+          <!--<div class="row row-links">               
              <ul class="foot-menu">                                                                                                                    
                <li class="foot-menu-item mbr-fonts-style display-7"><a href="https://mobirise.com/help/" class="text-warning">Help Center</a></li>
                <li class="foot-menu-item mbr-fonts-style display-7"><a href="http://forums.mobirise.com/" class="text-warning">Mobirise Forums</a></li>
                <li class="foot-menu-item mbr-fonts-style display-7"><a href="http://forums.mobirise.com/" class="text-warning">Mobirise Forums</a></li>
                <li class="foot-menu-item mbr-fonts-style display-7"><a href="http://forums.mobirise.com/" class="text-warning">Mobirise Forums</a></li>
               </ul>            
-            </div>            
+            </div> -->           
             <div class="row social-row">               
           <div class="social-list align-right pb-2">                                                                                              
             <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                    
@@ -82,12 +82,14 @@
             </div>
             <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span>                        </a>                    </div>
             </div>            
-            </div>            
-          <div class="row row-copirayt"><p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7 text-warning">                    © Copyright 2020 Mobirise. All Rights Reserved.                </p>            
+          </div>
+          <div class="row phone-row pt-2"><a href="tel:123-456-7890">+0 (50)-986-92-65</a><a class="pl-3" href="tel:123-456-7890">+0 (68)-986-92-65</a> </div> 
+          <div class="row"><img src="{% static "images/footer-image.png" %}" class="img-fluid" alt="Responsive image"></div>
           </div>        
         </div>    
       </div>
     </section>
+
     <script src="{% static "web/assets/jquery/jquery.min.js" %}"></script>  
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>  
     <script src="{% static "smoothscroll/smooth-scroll.js" %}"></script>  
@@ -95,7 +97,6 @@
     <script src="{% static "dropdown/js/nav-dropdown.js" %}"></script>  
     <script src="{% static "dropdown/js/navbar-dropdown.js" %}"></script>  
     <script src="{% static "touchswipe/jquery.touch-swipe.min.js" %}"></script>  
-    <script src="{% static "theme/js/script.js" %}"></script>
     <script src="{% static "popper/popper.min.js" %}"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js" integrity="sha512-X7kCKQJMwapt5FCOl2+ilyuHJp+6ISxFTVrx+nkrhgplZozodT9taV2GuGHxBgKKpOJZ4je77OuPooJg9FJLvw==" crossorigin="anonymous"></script>
   </body>
