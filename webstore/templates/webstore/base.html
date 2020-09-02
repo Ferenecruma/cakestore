@@ -1,41 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.0.28, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="{% static "images/icons8-cupcake-64-64x64.png" %}" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Amalfi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.0.28, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{% static "images/icons8-cupcake-64-64x64.png" %}" type="image/x-icon">
+    <meta name="description" content="">
+    
+    
+    <title>Amalfi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{% static "tether/tether.min.css" %}">
-  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
-  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-grid.min.css" %}">
-  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-reboot.min.css" %}">
-  
-  <link rel="stylesheet" href="{% static "dropdown/css/style.css" %}">
-  <link rel="stylesheet" href="{% static "socicon/css/styles.css" %}">
-  <link rel="stylesheet" href="{% static "theme/css/style.css" %}">
-  <link rel="preload" as="style" href="{% static "mobirise/css/mbr-additional.css" %}"><link rel="stylesheet" href="{% static "mobirise/css/mbr-additional.css" %}" type="text/css">
+    <link rel="stylesheet" href="{% static "tether/tether.min.css" %}">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-grid.min.css" %}">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-reboot.min.css" %}">
+    
+    <link rel="stylesheet" href="{% static "dropdown/css/style.css" %}">
+    <link rel="stylesheet" href="{% static "socicon/css/styles.css" %}">
+    <link rel="stylesheet" href="{% static "theme/css/style.css" %}">
+    <link rel="preload" as="style" href="{% static "mobirise/css/mbr-additional.css" %}"><link rel="stylesheet" href="{% static "mobirise/css/mbr-additional.css" %}" type="text/css">
 
-  <link rel="stylesheet" href="{% static "custom/css/main.css" %}">
-  <link rel="stylesheet" href="{% static "custom/css/navbar.css" %}">  
+    <link rel="stylesheet" href="{% static "custom/css/main.css" %}">
+    <link rel="stylesheet" href="{% static "custom/css/navbar.css" %}">
+    <link rel="stylesheet" href="{% static "custom/css/footer.css" %}">    
 
-</head>
-  <body class="d-flex flex-column">
+  </head>
+  <body>
     <!-- Navbar --> 
     <nav class="stroke">
       <div class="logo">
         <img src="{% static "images/logo_text.png" %}" class='img-fluid'>
       </div>
-      <ul class="nav-links hover-effect">
+      <ul class="nav-links">
         <li><a href="{% url "store-main" %}"> Головна </a></li>
         <li><a href="{% url "store-categories" %}"> Категорії </a></li>
         <li><a href="#"> Галерея </a></li>
@@ -51,26 +52,21 @@
 
     {% block content %} {% endblock %}
     <!-- Footer -->
-    <section class="footer3 cid-s48P1Icc8J custom-footer" once="footers" id="footer3-i">            
-      <div class="container">        
-        <div class="media-container-row align-center mbr-white">                     
-            <div class="row social-row">               
-          <div class="social-list align-right pb-2">                                                                                              
-            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                    
-            </div>
-            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                    
-            </div>
-            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-telegram socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span>                        </a> 
-            </div>
-            <div class="soc-item"><a href="https://twitter.com/mobirise" target="_blank"><span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span>                        </a>                    </div>
-            </div>            
-          </div>
-          <div class="row phone-row pt-2"><a href="tel:123-456-7890">+0 (50)-986-92-65</a><a class="pl-3" href="tel:123-456-7890">+0 (68)-986-92-65</a> </div> 
-          <div class="row"><img src="{% static "images/footer-image.png" %}" class="img-fluid" alt="Responsive image"></div>
-          </div>        
-        </div>    
+    <footer class="footer"> 
+      <div class="soc-links-footer">
+        <a href="https://twitter.com/mobirise"><span class="socicon-viber socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                          
+        <a href="https://twitter.com/mobirise"><span class="socicon-facebook socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                           
+        <a href="https://twitter.com/mobirise"><span class="socicon-instagram socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                         
       </div>
-    </section>
+      <!--<div class="phone-numbers">
+        <a href="tel:123-456-7890">123-456-7890</a> 
+        <a href="tel:123-456-7890">123-456-7890</a>
+      </div> --> 
+      <div class="footer-image">
+          <img src="{% static "images/footer-image.png" %}">
+      </div>
+    </footer>
+    <!-- Footer -->
 
     <script src="{% static "web/assets/jquery/jquery.min.js" %}"></script>  
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>  

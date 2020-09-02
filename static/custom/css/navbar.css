@@ -58,7 +58,7 @@ nav .logo img {
      }
 
      .nav-links a{
-        font-size: 27px;
+        font-size: 20px;
     }
 }
 @media (max-width: 768px){
@@ -73,7 +73,7 @@ nav .logo img {
     }
 
     nav .logo img{
-        max-width: 50%; 
+        max-width: 56%; 
     }
 
     .nav-links{
@@ -132,19 +132,19 @@ nav .logo img {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
+a,
+a:after,
+a:before {
   transition: all .5s;
 }
-nav ul li a:hover {
+a:hover {
   color: rgb(238, 241, 15);
 }
 
-nav.stroke ul li a{
+.stroke a{
   position: relative;
 }
-nav.stroke ul li a:after{
+.stroke a:after{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -156,6 +156,6 @@ nav.stroke ul li a:after{
   background: rgb(238, 241, 15);
   height: 1px;
 }
-nav.stroke ul li a:hover:after {
+.stroke a:hover:after {
   width: 100%;
 }

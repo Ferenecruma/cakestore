@@ -89,18 +89,6 @@ div.category_name {
     }
   }
 
-  .categories-strip{
-    padding: 10px;
-    text-align: center;
-    background: #ad1d12;
-    color: white;
-    font-size: 36px;
-    border-bottom: #f1d186 7px solid;
-    border-top: #f1d186 7px solid;
-    font-family: 'Marck Script', cursive;
-    margin-top: 20px;
-  }
-
   .categories-page{
     background-color: #f1e4c6;
   }
