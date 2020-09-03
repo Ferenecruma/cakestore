@@ -12,8 +12,8 @@ class Category(models.Model):
         return str(self.title)
 
     class Meta:
-        verbose_name = 'Категорії'
-        verbose_name_plural = 'Категорія'
+        verbose_name = 'Категорія'
+        verbose_name_plural = 'Категорії'
     
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title, to_lower=True)
@@ -26,7 +26,6 @@ class SubCategory(models.Model):
     description = models.TextField()
     photo = models.ImageField(upload_to='sub_categories')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
 
     def __str__(self):
         return str(self.title)
@@ -48,6 +47,10 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товари'
 
 
 class Metadata(models.Model):

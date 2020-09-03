@@ -1,5 +1,5 @@
 footer.footer {
-    display: block;
+    flex-shrink: 0;
     align-items: center;
     min-height: 8vh;
     background-color: #ad1d12;
@@ -17,9 +17,7 @@ footer.footer {
 }
 
 .phone-numbers {
-    display: flex;
-    justify-content: space-around;
-    max-width: 50%;
+    padding-left: 30%;
     margin: auto;
 }
 
@@ -34,7 +32,7 @@ footer.footer {
     }
     .footer-image {
         margin:auto; 
-        max-width: 55%;
+        max-width: 28%;
         height: auto;
     }
 }
@@ -42,7 +40,7 @@ footer.footer {
 @media (min-width:812px) and (max-width:1079px){
     .footer-image {
         margin:auto; 
-        max-width: 25%;
+        max-width: 15%;
         height: auto;
     }
     .soc-links-footer {
@@ -56,7 +54,7 @@ footer.footer {
 @media (min-width: 1080px){
     .footer-image {
         margin:auto; 
-        max-width: 15%;
+        max-width: 6%;
         height: auto;
     }
     .soc-links-footer {

@@ -34,7 +34,7 @@ nav {
 }
 
 nav .logo img {
-    max-width: 40%;
+    max-width: 60%;
 }
 
 .burger{
@@ -60,13 +60,12 @@ nav .logo img {
      .nav-links a{
         font-size: 20px;
     }
+
+    nav .logo img{
+        max-width: 56%; 
+    }
 }
 @media (max-width: 768px){
-
-    body{
-        overflow-x: hidden;
-    }
-
     nav .logo{
         width: 300px;
        margin-left: 10px; 
