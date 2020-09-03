@@ -8,7 +8,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 12vh;
     background-color: #ad1d12;
     font-family: 'Marck Script', cursive;
    
@@ -52,7 +52,7 @@ nav .logo img {
 
 @media (max-width: 1024px){
     nav {
-        min-height: 20vh;
+        min-height: 15vh;
     }
     .nav-links{
         width: 85%;
