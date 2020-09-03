@@ -6,12 +6,12 @@ footer.footer {
 }
 
 .soc-links-footer {
-    width: 35%;
+    width: 23%;
     margin: auto;
     margin-top: 8px;
     margin-bottom: 20px;
     flex-wrap: wrap;
-    padding: 25px;
+    padding: 20px;
     font-size: 1.3rem;
     align-items: center;
     display: flex;
@@ -21,6 +21,22 @@ footer.footer {
 
 .soc-links-footer a {
     color: #f1d186;
+}
+
+.soc-links-footer a.viber:hover {
+    color: #530477;
+}
+
+.soc-links-footer a.facebook:hover {
+    color: #0946ca;
+}
+
+.soc-links-footer a.phone:hover {
+    color: #0ebd08;
+}
+
+.soc-links-footer a.instagram:hover {
+    color: #0fe9e9;
 }
 
 .phone-numbers {
@@ -33,12 +49,18 @@ footer.footer {
     color: #f1d186;
 }
 
+.footer-image {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 @media (max-width: 811px){
     .soc-links-footer {
         width: 60%;
     }
-    .footer-image {
-        margin:auto; 
+    .footer-image { 
         max-width: 28%;
         height: auto;
     }
@@ -48,9 +70,8 @@ footer.footer {
 }
 
 @media (min-width:812px) and (max-width:1079px){
-    .footer-image {
-        margin:auto; 
-        max-width: 12%;
+    .footer-image { 
+        max-width: 10%;
         height: auto;
     }
     .soc-links-footer {
@@ -62,8 +83,7 @@ footer.footer {
 }
 
 @media (min-width: 1080px){
-    .footer-image {
-        margin:auto; 
+    .footer-image { 
         max-width: 6%;
         height: auto;
     }
@@ -72,5 +92,5 @@ footer.footer {
     }
     .phone-numbers a{
         font-size: 1rem;
-    }
+    } 
 }

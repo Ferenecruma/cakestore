@@ -50,12 +50,12 @@ nav .logo img {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 1024px){
+@media (min-width: 1080px) and (max-width: 1366px){
     nav {
         min-height: 15vh;
     }
     .nav-links{
-        width: 85%;
+        width: 65%;
     }
     nav .logo{
         margin-left: 50px; 
@@ -69,6 +69,27 @@ nav .logo img {
         max-width: 56%; 
     }
 }
+
+@media (max-width: 1080px){
+    nav {
+        min-height: 85px;
+    }
+    .nav-links{
+        width: 65%;
+    }
+    nav .logo{
+        margin-left: 50px; 
+     }
+
+     .nav-links a{
+        font-size: 20px;
+    }
+
+    nav .logo img{
+        max-width: 56%; 
+    }
+}
+
 @media (max-width: 768px){
     nav {
         min-height: 12vh;
@@ -85,7 +106,7 @@ nav .logo img {
     .nav-links{
         position: absolute;
         right: 0px;
-        height: 89vh;
+        height: 85vh;
         top: 11vh;
         background-color: #ad1d12;
         display: flex;
