@@ -9,22 +9,16 @@
     <link rel="shortcut icon" href="{% static "images/icons8-cupcake-64-64x64.png" %}" type="image/x-icon">
     <meta name="description" content="">
     
-    
     <title>Amalfi</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!--<link rel="stylesheet" href="{% static "tether/tether.min.css" %}">-->
     <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-grid.min.css" %}">
     <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-reboot.min.css" %}">
-
-    <!--<link rel="stylesheet" href="{% static "fontAwesome/css/fontawesome.css" %}">
-    <link rel="stylesheet" href="{% static "fontAwesome/css/brands.css" %}">
-    <link rel="stylesheet" href="{% static "fontAwesome/css/solid.css" %}">
-    <link rel="stylesheet" href="{% static "fontAwesome/css/all.css" %}"> -->
-    
+  
     <link rel="stylesheet" href="{% static "dropdown/css/style.css" %}">
     <link rel="stylesheet" href="{% static "socicon/css/styles.css" %}">
     <link rel="stylesheet" href="{% static "theme/css/style.css" %}">
@@ -32,7 +26,9 @@
 
     <link rel="stylesheet" href="{% static "custom/css/main.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/navbar.css" %}">
-    <link rel="stylesheet" href="{% static "custom/css/footer.css" %}">    
+    <link rel="stylesheet" href="{% static "custom/css/footer.css" %}">   
+    
+    <script src="https://kit.fontawesome.com/b2deaaced1.js" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -41,8 +37,8 @@
       <div class="logo">
         <img src="{% static "images/logo.svg" %}" class='img-fluid'>
       </div>
-      <ul class="nav-links">
-        <li><a href="{% url "store-main" %}" class="effect-2"> Головна </a></li>
+      <ul class="nav-links cl-effect-21">
+        <li><a href="{% url "store-main" %}"> Головна </a></li>
         <li><a href="{% url "store-categories" %}"> Категорії </a></li>
         <li><a href="#"> Галерея </a></li>
         <li><a href="#"> Замовити </a></li>
@@ -66,9 +62,10 @@
     <!-- Footer -->
     <footer class="footer"> 
       <div class="soc-links-footer">
-        <a href="#"><span class="socicon-viber socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                          
-        <a href="#"><span class="socicon-facebook socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                           
-        <a href="#"><span class="socicon-instagram socicon" style="color: #f1d186; fill: rgb(0, 0, 0);"></span></a>                         
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-viber"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="footer-image">
           <img src="{% static "images/footer-image.svg" %}">

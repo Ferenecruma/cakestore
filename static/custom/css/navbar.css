@@ -18,7 +18,7 @@ nav {
     display: flex;
     justify-content: space-around;
     width: 40%;
-    margin-bottom: 0px!important;
+    margin-bottom: 0;
 }
 
 .nav-links li{
@@ -34,7 +34,7 @@ nav {
 }
 
 nav .logo img {
-    max-width: 60%;
+    max-width: 73%;
 }
 
 .burger{
@@ -44,12 +44,16 @@ nav .logo img {
 .burger div {
     width: 25px;
     height: 2px;
+    border-radius: 2px;
     background-color: #f1d186;
-    margin: 5px;
+    margin: 5.5px;
     transition: all 0.3s ease;
 }
 
 @media (max-width: 1024px){
+    nav {
+        min-height: 20vh;
+    }
     .nav-links{
         width: 85%;
     }
@@ -66,6 +70,9 @@ nav .logo img {
     }
 }
 @media (max-width: 768px){
+    nav {
+        min-height: 12vh;
+    }
     nav .logo{
         width: 300px;
        margin-left: 10px; 
@@ -157,4 +164,60 @@ a:hover {
 }
 .stroke a:hover:after {
   width: 100%;
+}
+
+/* Effect 21: borders slight translate */
+.cl-effect-21 a {
+	padding: 10px;
+	color: #f1d186;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.cl-effect-21 a::before,
+.cl-effect-21 a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 a::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 a::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-21 a:hover,
+.cl-effect-21 a:focus {
+	color: #fff;
+}
+
+.cl-effect-21 a:hover::before,
+.cl-effect-21 a:focus::before,
+.cl-effect-21 a:hover::after,
+.cl-effect-21 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
 }
