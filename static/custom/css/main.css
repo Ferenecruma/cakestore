@@ -13,6 +13,18 @@ body {
   flex: 1 0 auto;
 }
 
+.content::after {
+  content: "";
+  background: url(/static/images/mbr-1346x1920.jpg);
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
 .menu_image {
     padding-top: 20px;
     padding-bottom: 20px;
