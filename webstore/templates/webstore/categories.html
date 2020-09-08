@@ -1,16 +1,16 @@
 
-    <div id="categories-container" class="categories-container">
-            {% for category in categories %}
-            <div class="categories-item">
-                <a href="{% url 'store-category' category.slug %}">              
-                   <figure class="imghvr-zoom-in">
-                        <img src="{{ category.photo.url }}">
-                        <figcaption style="background-color:#ad1d12">
-                            <h1>{{ category.title }}</h1>
-                            
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            {% endfor %}
-    </div>
+<div id="categories-container" class="categories-container">
+        {% for category in categories %}
+        <div class="categories-item">
+            <a href="{% url 'store-category' category.slug %}">              
+                <figure class="imghvr-zoom-in">
+                    <img src="{{ category.photo.url }}">
+                    <figcaption style="background-color:#ad1d12">
+                        <h1>{{ category.title }}</h1>
+                        
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+        {% endfor %}
+</div>

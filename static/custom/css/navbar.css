@@ -50,6 +50,11 @@ nav .logo img {
     transition: all 0.3s ease;
 }
 
+.nav-links li a.shopping-cart-active i {
+    transform: scale(1.1);
+    transition: transform .2s;
+}
+
 @media (min-width: 1080px) and (max-width: 1366px){
     nav {
         min-height: 15vh;
