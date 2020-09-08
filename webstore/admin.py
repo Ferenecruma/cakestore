@@ -1,7 +1,8 @@
 from django.contrib import admin
-from webstore.models import Category, Product
+from webstore.models import Category, Product, SubCategory
 
 # Register your models here.
 
 admin.site.register(Category)
+admin.site.register(SubCategory)
 admin.site.register(Product)

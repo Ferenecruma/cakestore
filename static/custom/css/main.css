@@ -1,21 +1,29 @@
 
 html, body {
   height: 100%;
+  width: 100%;
   overflow-x: hidden!important 
 }
 
 body {
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
+
 .content {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.93),rgba(253, 253, 253, 0.93)), url(/static/images/mbr-1346x1920.jpg);
   flex: 1 0 auto;
+}
+
+.instagram-row {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 .content::after {
   content: "";
-  background: url(/static/images/mbr-1346x1920.jpg);
+  /* background: url(/static/images/mbr-1346x1920.jpg) repeat right top; */
   opacity: 0.1;
   top: 0;
   left: 0;
@@ -25,84 +33,31 @@ body {
   z-index: -1;   
 }
 
-.menu_image {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 5em;
-}
-figure .menu_image {
-	opacity: 0.8;
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-figure:hover .menu_image {
-	opacity: 1;
+.categories-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 60%;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-figure:hover + div.category_name { color: yellow; }
+.categories-container .categories-item {
+  padding: 10px;
+  width: 400px;
+  height: 300px;
+}
 
-div.category_name {
-    font-family: 'Caveat', cursive;
-    font-size: 50px;
-    color: white;
-    position: absolute;
-    opacity: 0.8;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.catagories-image {
+  width: 100%;
+  height: 100%;
+}
 
-  li.navbar-items{
-    font-family: 'Marck Script', cursive;
-    font-size: 30px;
-    color: #eb640ab0!important
+@media (max-width: 1340px){
+  .categories-container {
+    max-width: 88%;
   }
+}
 
-  a.nav-link{
-    color: #744510ef!important;
-  }
 
-  a.nav-link:hover{
-    color: rgb(240, 8, 8)!important;
-  }
-
-  .categories-cont{
-    max-width: 80%!important;
-  }
-
-  .carousel-container{
-    background-color: #f1dba7;
-  }
-
-  .custom-footer{
-    background-color: #ad1d12;
-  }
-
-  .phone-row a{
-    opacity: 0.7;
-    color: #f1d186!important;
-  }
-
-  .phone-row a:hover{
-    opacity: 1;
-    color: #f3dca8!important;
-  }
-
-  .main-carousel{
-    max-width: 55%;
-    border-radius: 2em;
-  }
-
-  @media (max-width: 1000px) {
-    .main-carousel{
-      display: none;
-    }
-  }
-
-  .categories-page{
-    background-color: #f1e4c6;
-  }
-
-  .categories-page .card-img-top {
-    border-radius: 1em;
-  }

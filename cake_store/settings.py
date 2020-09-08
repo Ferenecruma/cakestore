@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'webstore',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,7 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+
+# Django sessions settings
+
+CART_SESSION_ID = 'cart'

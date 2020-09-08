@@ -1,0 +1,21 @@
+.home-demo {
+    height: 300px;
+    margin-top: 100px;
+}
+
+.home-demo .item {
+    width: 100%;
+    background: #ff3f4d;
+}
+
+.home-demo h3 {
+    text-align: center;
+}
+.home-demo h2 {
+    color: #FFF;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+}

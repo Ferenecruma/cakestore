@@ -1,28 +1,93 @@
 {% extends "webstore/base.html" %}
 
 {% block content %}
-<div class="album py-5 categories-page">
-    <div class="container">
-
-      <div class="row">
-        {% for product in products %}
-        <div class="col-md-6 col-lg-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="{{ product.photo.url }}" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Детальніше</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Замовити</button>
-                </div>
-              </div>
+  <div class="subcatecogries">
+    <div class="btn-group">
+      {% for subcategory in subcategories %}
+      <button class="btn-group__item btn-group__item">{{ subcategory.title}}</button>
+      {% endfor %}
+    </div>  
+  </div>
+  <div class="products">
+    {% for product in products %}
+    <div class="wrapper">
+      <div class="product-container">
+        <div class="top" style="
+          background: url({{ product.photo.url }}) no-repeat center center;
+          background-size: cover;">
+        </div>
+        <div class="bottom">
+          <div class="left">
+            <div class="details">
+              <h1>{{ product.title }}</h1>
+              <p>£{{ product.price }}</p>
             </div>
+            <div class="buy"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="right">
+            <div class="done"><i class="fas fa-check"></i></div>
+            <div class="details">
+              <h1>{{ product.title }}</h1>
+              <p>Added to your cart</p>
+            </div>
+            <div class="remove"><i class="fas fa-trash"></i></div>
           </div>
         </div>
-        {% endfor %}
-        
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fas fa-info-circle"></i></div>
+        <div class="contents">
+          <table>
+            <tr>
+              <th>Width</th>
+              <th>Height</th>
+            </tr>
+            <tr>
+              <td>3000mm</td>
+              <td>4000mm</td>
+            </tr>
+            <tr>
+              <th>Something</th>
+              <th>Something</th>
+            </tr>
+            <tr>
+              <td>200mm</td>
+              <td>200mm</td>
+            </tr>
+            <tr>
+              <th>Something</th>
+              <th>Something</th>
+            </tr>
+            <tr>
+              <td>200mm</td>
+              <td>200mm</td>
+            </tr>
+            <tr>
+              <th>Something</th>
+              <th>Something</th>
+            </tr>
+            <tr>
+              <td>200mm</td>
+              <td>200mm</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
+    {% endfor %}
+
+  <script>
+    const buttons = document.querySelectorAll(".btn-group__item");
+    buttons.forEach(button => {
+      button.addEventListener("click",() => {
+        // do some action according to button
+        
+        // show success feedback
+        button.classList.add("btn-group__item--active");
+        setTimeout(() => {
+          button.classList.remove("btn-group__item--active");
+        },600)
+      })
+    })
+  </script>
 {% endblock content %}

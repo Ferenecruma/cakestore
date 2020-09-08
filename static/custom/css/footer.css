@@ -21,15 +21,20 @@ footer.footer {
 }
 
 .soc-links-footer a {
+    transition: transform 0.3s;
     color: #f1d186;
 }
 
+.soc-links-footer a:hover {
+    transform: scale(1.3);
+}
+
 .soc-links-footer a.viber:hover {
-    color: #9a0cdb;
+    color: #ba2dfc;
 }
 
 .soc-links-footer a.facebook:hover {
-    color: #0753f8;
+    color: #3c78fa;
 }
 
 .soc-links-footer a.phone:hover {
@@ -52,18 +57,26 @@ footer.footer {
 
 .footer-image {
     display: flex;
+    overflow: visible;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
+
+@media (max-width: 500px){
+    .footer-image { 
+        max-width: 28%;
+        height: auto;
+    }
+}
 
 @media (max-width: 811px){
     .soc-links-footer {
         width: 60%;
     }
     .footer-image { 
-        max-width: 28%;
+        max-width: 15%;
         height: auto;
     }
     .soc-links-footer {
@@ -86,7 +99,7 @@ footer.footer {
 
 @media (min-width: 1080px){
     .footer-image { 
-        max-width: 6%;
+        max-width: 4.5%;
         height: auto;
     }
     .soc-links-footer {

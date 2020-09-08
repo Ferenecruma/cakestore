@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <!--<link rel="stylesheet" href="{% static "tether/tether.min.css" %}">-->
-    <!--<link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "tether/tether.min.css" %}">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-grid.min.css" %}">
-    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-reboot.min.css" %}"> -->
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-reboot.min.css" %}">
   
     <link rel="stylesheet" href="{% static "dropdown/css/style.css" %}">
     <link rel="stylesheet" href="{% static "socicon/css/styles.css" %}">
@@ -25,9 +25,13 @@
     
 
     <link rel="stylesheet" href="{% static "custom/css/main.css" %}">
+    <link rel="stylesheet" href="{% static "custom/css/imagehover.min.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/carousel.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/navbar.css" %}">
-    <link rel="stylesheet" href="{% static "custom/css/footer.css" %}">   
+    <link rel="stylesheet" href="{% static "custom/css/footer.css" %}">
+    <link rel="stylesheet" href="{% static "custom/css/cards.css" %}">
+    <link rel="stylesheet" href="{% static "custom/css/owl-carousel.css" %}">
+    <link rel="stylesheet" href="{% static "owl-carousel/css/owl.carousel.min.css" %}">       
     
     <script src="https://kit.fontawesome.com/b2deaaced1.js" crossorigin="anonymous"></script>
 
@@ -39,10 +43,12 @@
         <img src="{% static "images/logo.svg" %}" class='img-fluid'>
       </div>
       <ul class="nav-links cl-effect-21">
-        <li><a href="{% url "store-main" %}"> Головна </a></li>
-        <li><a href="{% url "store-categories" %}"> Категорії </a></li>
+        <li><a id="home-link" href="{% url "store-main" %}"> Головна </a></li>
+        <li><a id="categories-link" href="#"> Категорії </a></li>
         <li><a href="#"> Галерея </a></li>
         <li><a href="#"> Замовити </a></li>
+        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+        
       </ul>
       <div class="burger">
         <div class="line1"></div>
@@ -54,9 +60,10 @@
 
 
     <!-- Main Content-->
-    <div class="content">
-      {% block content %} {% endblock %}
-    </div>
+    <section id="content" class="content">
+      {% block content %} 
+      {% endblock %}
+    </section>
     <!-- Main Content-->
 
 
@@ -84,7 +91,43 @@
     <script src="{% static "touchswipe/jquery.touch-swipe.min.js" %}"></script>  
     <script src="{% static "popper/popper.min.js" %}"></script> 
     <script src="{% static "custom/js/navbar.js" %}"></script>
+    <script src="{% static "owl-carousel/js/owl.carousel.min.js" %}"></script>
     <script src="{% static "custom/js/carousel.js" %}"></script>
+    <script src="{% static "custom/js/owl-carousel.js" %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js" integrity="sha512-X7kCKQJMwapt5FCOl2+ilyuHJp+6ISxFTVrx+nkrhgplZozodT9taV2GuGHxBgKKpOJZ4je77OuPooJg9FJLvw==" crossorigin="anonymous"></script>
+
+    <script>
+      document.querySelector("#categories-link").addEventListener(
+      "click",  
+      function fetch_categories(event)
+      {
+        event.preventDefault();
+        var url = "{% url "store-categories" %}";
+        $.ajax(url, {
+              type: 'get',
+              success: function(result) {
+                  // success code execution here
+                  $('#content').html(result); // Update UI.
+              },
+              error: function(xhr,status,error) {
+                  // error code here
+              },
+              complete: function(xhr,status) {
+                  // completion code here
+              }
+          });
+      }, 
+      false);
+    </script>
+
+    <script>
+        $('.buy').click(function(){
+        $('.bottom').addClass("clicked");
+      });
+
+      $('.remove').click(function(){
+        $('.bottom').removeClass("clicked");
+      });
+    </script>
   </body>
 </html>
