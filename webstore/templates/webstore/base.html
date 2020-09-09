@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{% static "custom/css/navbar.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/footer.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/cards.css" %}">
+    <link rel="stylesheet" href="{% static "custom/css/cart.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/owl-carousel.css" %}">
     <link rel="stylesheet" href="{% static "owl-carousel/css/owl.carousel.min.css" %}">       
     
@@ -44,12 +45,12 @@
       </div>
       <ul class="nav-links cl-effect-21">
         <li><a id="home-link" href="{% url "store-main" %}"> Головна </a></li>
-        <li><a id="categories-link" href="#"> Категорії </a></li>
+        <li><a id="categories-link" href="{% url "store-categories" %}"> Категорії </a></li>
         <li><a href="#"> Галерея </a></li>
         <li><a href="#"> Замовити </a></li>
-        <li><a class="shopping-cart" href="#"><i class="fas fa-shopping-cart"></i></a></li>
-        
+        <li><a id="cart-link" class="shopping-cart" href="{% url "cart-main" %}"><i class="fas fa-shopping-cart"></i></a></li>  
       </ul>
+
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -93,31 +94,38 @@
     <script src="{% static "custom/js/navbar.js" %}"></script>
     <script src="{% static "owl-carousel/js/owl.carousel.min.js" %}"></script>
     <script src="{% static "custom/js/carousel.js" %}"></script>
+    <script src="{% static "custom/js/cart.js" %}"></script>
     <script src="{% static "custom/js/owl-carousel.js" %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js" integrity="sha512-X7kCKQJMwapt5FCOl2+ilyuHJp+6ISxFTVrx+nkrhgplZozodT9taV2GuGHxBgKKpOJZ4je77OuPooJg9FJLvw==" crossorigin="anonymous"></script>
 
     <script>
-      document.querySelector("#categories-link").addEventListener(
-      "click",  
-      function fetch_categories(event)
-      {
-        event.preventDefault();
-        var url = "{% url "store-categories" %}";
-        $.ajax(url, {
-              type: 'get',
-              success: function(result) {
-                  // success code execution here
-                  $('#content').html(result); // Update UI.
-              },
-              error: function(xhr,status,error) {
-                  // error code here
-              },
-              complete: function(xhr,status) {
-                  // completion code here
-              }
-          });
-      }, 
-      false);
+
+      function AjaxFetch(id, url){
+        document.querySelector(id).addEventListener(
+        "click",  
+        function fetch_categories(event)
+        {
+          event.preventDefault();
+          $.ajax(url, {
+                type: 'get',
+                success: function(result) {
+                    // success code execution here
+                    $('#content').html(result); // Update UI.
+                },
+                error: function(xhr,status,error) {
+                    // error code here
+                },
+                complete: function(xhr,status) {
+                    // completion code here
+                }
+            });
+        }, 
+        false);
+      };
+      
+      // AjaxFetch("#home-link", "{% url "fetch-main" %}");
+      AjaxFetch("#categories-link", "{% url "store-categories" %}");
+      
     </script>
   </body>
 </html>

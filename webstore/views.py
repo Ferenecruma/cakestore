@@ -9,6 +9,10 @@ def home(request):
 def about(request):
     return render(request, 'webstore/about.html')
 
+def get_main_content(request):
+    print("returning content")
+    return render(request, 'webstore/main-content.html')
+
 def catagories(request):
     context = dict()
     context['categories'] = get_main_categories()
@@ -21,9 +25,6 @@ def category(request, slug):
         'products' : products,
         'subcategories' : subcategories,
     })
-
-def get_main_content(request):
-    return render(request, 'webstore/main-content.html')
 
 def get_main_categories():
     main_categories = Category.objects.all()

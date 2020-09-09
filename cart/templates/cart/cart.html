@@ -1,0 +1,62 @@
+{% extends "webstore/base.html" %}
+
+{% block content %}
+<div class="container mb-4 mt-4 ">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Назва</th>
+                            <th scope="col" class="text-center">Кількість</th>
+                            <th scope="col" class="text-right">Ціна</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in cart %}
+                            {% with product=item.product %}
+                            <tr>
+                                <td><img class="cart-image" src="{{ product.photo.url }}" /> </td>
+                                <td> {{ product.title }} </td>
+                                <td><input class="form-control" type="text" value="1" /></td>
+                                <td class="text-right"> {{ product.price }} </td>
+                                <td class="text-right"><a href="/cart/remove/{{ product.id }}/"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button></a></td>
+                            </tr>
+                            {% endwith %}
+                        {% endfor %}
+                        <tr>
+                            <td></td>
+                            
+                            <td></td>
+                            <td></td>
+                            <td>Доставка: </td>
+                            <td class="text-right">6,90 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            
+                            <td></td>
+                            <td></td>
+                            <td><strong>Всього: </strong></td>
+                            <td class="text-right"><strong>{{ cart.get_total_price }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light">Продовжити покупки</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase">Замовити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
