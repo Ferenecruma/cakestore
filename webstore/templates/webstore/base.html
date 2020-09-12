@@ -12,7 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "theme/css/style.css" %}">
+    
     <link rel="stylesheet" href="{% static "custom/css/main.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/imagehover.min.css" %}">
     <link rel="stylesheet" href="{% static "custom/css/carousel.css" %}">
@@ -81,14 +81,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b2deaaced1.js" crossorigin="anonymous"></script>
+
     <script src="{% static "custom/js/fetch_content.js" %}"></script>
     <script src="{% static "custom/js/navbar.js" %}"></script>
     <script src="{% static "owl-carousel/js/owl.carousel.min.js" %}"></script>
     <script src="{% static "custom/js/carousel.js" %}"></script>
     <script src="{% static "custom/js/cart.js" %}"></script>
     <script src="{% static "custom/js/owl-carousel.js" %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js" integrity="sha512-X7kCKQJMwapt5FCOl2+ilyuHJp+6ISxFTVrx+nkrhgplZozodT9taV2GuGHxBgKKpOJZ4je77OuPooJg9FJLvw==" crossorigin="anonymous"></script>
-
+    
     <script>
       AjaxFetch("#home-link", "{% url "fetch-main" %}");
       AjaxFetch("#categories-link", "{% url "store-categories" %}");

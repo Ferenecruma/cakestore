@@ -4,12 +4,33 @@ html, body {
   width: 100%;
   overflow-x: hidden!important 
 }
-
+img, iframe {
+  display: block;
+  width: 100%;
+}
 body {
   display: flex;
   flex-direction: column;
 }
-
+a{
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+section {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel-item {
+  text-align: center;
+}
+section, .container, .container-fluid {
+  position: relative;
+}
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+  display: flex;
+}
 .content {
   background-image: linear-gradient(rgba(255, 255, 255, 0.93),rgba(253, 253, 253, 0.93)), url(/static/images/mbr-1346x1920.jpg);
   flex: 1 0 auto;
