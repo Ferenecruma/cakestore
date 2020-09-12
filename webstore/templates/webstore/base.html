@@ -11,6 +11,7 @@
     <title>Amalfi</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <link rel="stylesheet" href="{% static "custom/css/main.css" %}">
@@ -36,7 +37,7 @@
         <li><a href="#"> Галерея </a></li>
         <li><a href="#"> Замовити </a></li>
         <li>
-          <a id="cart-link" href="{% url "cart-main" %}">
+          <a id="cart-link" href="#">
           <span id='items-counter' class="fa-stack has-badge fa-stack-empty" data-count="5">
               <i class="fa fa-shopping-cart fa-stack-1x"></i>
           </span>
@@ -92,7 +93,7 @@
     <script>
       AjaxFetch("#home-link", "{% url "fetch-main" %}");
       AjaxFetch("#categories-link", "{% url "store-categories" %}");
-      AjaxFetch("#cart-link", "{% url "cart-main" %}");
+      AjaxFetch("#cart-link", "/cart/");
     </script>
   </body>
 </html>
