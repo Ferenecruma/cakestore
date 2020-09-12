@@ -5,3 +5,25 @@
     }
   }
   
+  .fa-stack[data-count]:after {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    content: attr(data-count);
+    font-size: 35%;
+    padding: 0.7em;
+    border-radius: 999px;
+    line-height: .8em;
+    color: white;
+    background: rgba(255, 0, 0, 0.85);
+    text-align: center;
+    min-width: 2em;
+    font-weight: bold;
+    transition:font-size 0.2s, right 0.2s, top 0.2s;
+  }
+
+  .fa-stack-empty[data-count]:after {
+    font-size: 0!important;
+    right: 20px!important;
+    top: 15px!important;
+  }

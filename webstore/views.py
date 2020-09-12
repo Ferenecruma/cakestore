@@ -10,7 +10,6 @@ def about(request):
     return render(request, 'webstore/about.html')
 
 def get_main_content(request):
-    print("returning content")
     return render(request, 'webstore/main-content.html')
 
 def catagories(request):

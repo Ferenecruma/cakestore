@@ -20,7 +20,10 @@ def cart_remove(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product=product)
     if request.is_ajax():
-        response_data = {'status' : 'success', 'message' : 'removed'}
+        response_data = {
+                    'status' : 'success', 
+                    'message' : 'deleted',
+                    'items_num' : str(len(cart))}
         return JsonResponse(response_data)
     else:
         return redirect('cart-main')

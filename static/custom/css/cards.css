@@ -16,6 +16,11 @@
     justify-content: space-around;
     font-family: sans-serif;
 }
+@media (max-device-width: 500px) and (min-device-width: 100px){
+    .products {
+      max-width: 90%!important;
+    }
+} 
 .wrapper {
     width: 300px;
     height: 400px;
