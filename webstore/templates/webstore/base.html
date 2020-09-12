@@ -91,8 +91,8 @@
     <script src="{% static "custom/js/owl-carousel.js" %}"></script>
     
     <script>
-      AjaxFetch("#home-link", "{% url "fetch-main" %}");
-      AjaxFetch("#categories-link", "{% url "store-categories" %}");
+      AjaxFetch("#home-link", "/fetch_main");
+      AjaxFetch("#categories-link", "/categories");
       AjaxFetch("#cart-link", "/cart/");
     </script>
   </body>
