@@ -6,27 +6,30 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('webstore', '0007_auto_20200902_2347'),
-    ]
+    dependencies = [("webstore", "0007_auto_20200902_2347")]
 
     operations = [
         migrations.AlterModelOptions(
-            name='category',
-            options={'verbose_name': 'Категорія', 'verbose_name_plural': 'Категорії'},
+            name="category",
+            options={"verbose_name": "Категорія", "verbose_name_plural": "Категорії"},
         ),
         migrations.AlterModelOptions(
-            name='product',
-            options={'verbose_name': 'Товар', 'verbose_name_plural': 'Товари'},
+            name="product",
+            options={"verbose_name": "Товар", "verbose_name_plural": "Товари"},
         ),
         migrations.AddField(
-            model_name='product',
-            name='price',
+            model_name="product",
+            name="price",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AddField(
-            model_name='product',
-            name='sub_category',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='webstore.SubCategory'),
+            model_name="product",
+            name="sub_category",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="webstore.SubCategory",
+            ),
         ),
     ]

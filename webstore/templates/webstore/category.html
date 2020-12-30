@@ -3,7 +3,7 @@
       {% for subcategory in subcategories %}
       <button class="btn-group__item btn-group__item">{{ subcategory.title}}</button>
       {% endfor %}
-    </div>  
+    </div>
   </div>
 
   <div class="products">
@@ -26,7 +26,7 @@
             <div class="done"><i class="fas fa-check"></i></div>
             <div class="details">
               <h1>{{ product.title }}</h1>
-              <p>Added to your cart</p>
+              <p>У кошику</p>
             </div>
             <div id="{{ product.id }}" class="remove"  onclick="delete_item_from_cart({{ product.id }})"><i class="fas fa-trash"></i></div>
           </div>
@@ -74,9 +74,9 @@
     </div>
     {% endfor %}
   </div>
-  
 
-  
+
+
 
 
 
@@ -85,7 +85,7 @@
     buttons.forEach(button => {
       button.addEventListener("click",() => {
         // do some action according to button
-        
+
         // show success feedback
         button.classList.add("btn-group__item--active");
         setTimeout(() => {
@@ -94,4 +94,3 @@
       })
     })
   </script>
-  

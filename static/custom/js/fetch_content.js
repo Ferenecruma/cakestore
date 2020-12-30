@@ -1,7 +1,7 @@
 function AjaxFetch(id, url){
 
     document.querySelector(id).addEventListener(
-    "click",  
+    "click",
     function fetch_categories(event)
     {
       event.preventDefault();
@@ -22,8 +22,6 @@ function AjaxFetch(id, url){
                 // completion code here
             }
         });
-    }, 
+    },
     false);
   };
-
- 

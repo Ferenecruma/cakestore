@@ -6,19 +6,22 @@ import django.utils.timezone
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('webstore', '0001_initial'),
-    ]
+    dependencies = [("webstore", "0001_initial")]
 
     operations = [
         migrations.AlterModelOptions(
-            name='category',
-            options={'verbose_name': 'Категорії', 'verbose_name_plural': 'Категорія'},
+            name="category",
+            options={"verbose_name": "Категорії", "verbose_name_plural": "Категорія"},
         ),
         migrations.AddField(
-            model_name='category',
-            name='slug',
-            field=models.SlugField(default=django.utils.timezone.now, editable=False, max_length=40, unique=True),
+            model_name="category",
+            name="slug",
+            field=models.SlugField(
+                default=django.utils.timezone.now,
+                editable=False,
+                max_length=40,
+                unique=True,
+            ),
             preserve_default=False,
         ),
     ]

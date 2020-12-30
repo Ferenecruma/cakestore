@@ -6,15 +6,15 @@ import django.utils.timezone
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('webstore', '0005_auto_20200831_1535'),
-    ]
+    dependencies = [("webstore", "0005_auto_20200831_1535")]
 
     operations = [
         migrations.AddField(
-            model_name='product',
-            name='photo',
-            field=models.ImageField(default=django.utils.timezone.now, upload_to='categories'),
+            model_name="product",
+            name="photo",
+            field=models.ImageField(
+                default=django.utils.timezone.now, upload_to="categories"
+            ),
             preserve_default=False,
-        ),
+        )
     ]

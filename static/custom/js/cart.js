@@ -38,9 +38,9 @@ const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value; //
     function add_item_to_cart(item_id){
       let url = "/cart/add/" + String(item_id) + "/";
       let bottom = document.getElementById('bottom-' + String(item_id));
-      
+
       postData(url, {'data': 'somedata'}).then(data => {
-      change_cart_counter(data['items_num']) 
+      change_cart_counter(data['items_num'])
       });
 
       bottom.classList.add('clicked');

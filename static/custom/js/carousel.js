@@ -25,11 +25,11 @@ $(function(){
              $('.carousel-item').eq(prev).removeClass('active');
              $('.carousel-item').eq(slide).addClass('active');
         setTimeout(function(){
-  
+
         },800);
-      
-  
-      
+
+
+
       console.log('current '+current);
       console.log('prev '+prev);
     }

@@ -65,7 +65,7 @@ footer.footer {
 
 
 @media (max-width: 500px){
-    .footer-image { 
+    .footer-image {
         max-width: 28%;
         height: auto;
     }
@@ -75,7 +75,7 @@ footer.footer {
     .soc-links-footer {
         width: 60%;
     }
-    .footer-image { 
+    .footer-image {
         max-width: 15%;
         height: auto;
     }
@@ -85,7 +85,7 @@ footer.footer {
 }
 
 @media (min-width:812px) and (max-width:1079px){
-    .footer-image { 
+    .footer-image {
         max-width: 10%;
         height: auto;
     }
@@ -98,7 +98,7 @@ footer.footer {
 }
 
 @media (min-width: 1080px){
-    .footer-image { 
+    .footer-image {
         max-width: 4.5%;
         height: auto;
     }
@@ -107,5 +107,5 @@ footer.footer {
     }
     .phone-numbers a{
         font-size: 1rem;
-    } 
+    }
 }

@@ -5,13 +5,6 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('webstore', '0003_auto_20200831_1530'),
-    ]
+    dependencies = [("webstore", "0003_auto_20200831_1530")]
 
-    operations = [
-        migrations.RemoveField(
-            model_name='category',
-            name='slug',
-        ),
-    ]
+    operations = [migrations.RemoveField(model_name="category", name="slug")]

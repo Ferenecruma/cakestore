@@ -4,7 +4,7 @@
       height: auto;
     }
   }
-  
+
   .fa-stack[data-count]:after {
     position: absolute;
     right: 10px;

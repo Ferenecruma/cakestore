@@ -21,7 +21,7 @@ function NavSlide(){
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    burger.addEventListener('click', NavSlide, false);    
+    burger.addEventListener('click', NavSlide, false);
 }
 
 navSlide();

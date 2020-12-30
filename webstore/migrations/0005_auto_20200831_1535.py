@@ -6,20 +6,20 @@ import django.utils.timezone
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('webstore', '0004_remove_category_slug'),
-    ]
+    dependencies = [("webstore", "0004_remove_category_slug")]
 
     operations = [
         migrations.AddField(
-            model_name='category',
-            name='slug',
-            field=models.SlugField(default=django.utils.timezone.now, editable=False, max_length=40),
+            model_name="category",
+            name="slug",
+            field=models.SlugField(
+                default=django.utils.timezone.now, editable=False, max_length=40
+            ),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='category',
-            name='title',
+            model_name="category",
+            name="title",
             field=models.CharField(max_length=100, unique=True),
         ),
     ]

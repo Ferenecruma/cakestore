@@ -2,7 +2,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden!important 
+  overflow-x: hidden!important
 }
 img, iframe {
   display: block;
@@ -51,7 +51,7 @@ section, .container, .container-fluid {
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1;   
+  z-index: -1;
 }
 
 .categories-container{
@@ -95,4 +95,3 @@ section, .container, .container-fluid {
   text-align:center;
   min-width: 1em;
 }
-

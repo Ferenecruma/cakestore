@@ -2,12 +2,12 @@
 <div id="categories-container" class="categories-container">
         {% for category in categories %}
         <div class="categories-item">
-            <a onclick="DownloadCategory('{% url 'store-category' category.slug %}')">             
+            <a onclick="DownloadCategory('{% url 'store-category' category.slug %}')">
                 <figure class="imghvr-zoom-in">
                     <img src="{{ category.photo.url }}">
                     <figcaption style="background-color:#ad1d12">
                         <h1>{{ category.title }}</h1>
-                        
+
                     </figcaption>
                 </figure>
             </a>
@@ -18,8 +18,8 @@
 <script>
     function DownloadCategory(url){
         let main_content = document.getElementById('content');
-        
+
         GetData(url).then(data  => {
-          main_content.innerHTML = data }); 
+          main_content.innerHTML = data });
     };
 </script>
