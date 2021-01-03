@@ -1,15 +1,20 @@
 version: '3.8'
 
 services:
-  nginx:
-    build: ./nginx
+  nginx:      
+    restart: unless-stopped
+    image: staticfloat/nginx-certbot
     ports:
-      - 80:80
+      - 80:80/tcp
+      - 443:443/tcp
+    environment:
+      CERTBOT_EMAIL: ferenecruma@gmail.com
     volumes:
+      - ./conf.d:/etc/nginx/user.conf.d:ro
+      - letsencrypt:/etc/letsencrypt
       - ./web/static:/home/app/microservice/static
     depends_on:
       - web
-    restart: "always"
   web:
     build: ./web
     command: python manage.py runserver 0.0.0.0:8000
@@ -30,3 +35,4 @@ services:
 
 volumes:
   postgres_data:
+  letsencrypt:
