@@ -1,7 +1,10 @@
 version: '3.8'
 
 services:
+<<<<<<< HEAD
   nginx:      
+=======
+  nginx:
     restart: unless-stopped
     image: staticfloat/nginx-certbot
     ports:
